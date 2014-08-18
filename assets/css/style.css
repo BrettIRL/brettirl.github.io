@@ -123,6 +123,8 @@ h1, h2, h3, h4, h5, h6 {
 	margin-left: -35px;
 	z-index: -1;
 	-webkit-border-radius: 35px;
+	-moz-border-radius: 35px;
+	border-radius: 35px;
 }
 
 .date-divider-day, .date-divider-month {
