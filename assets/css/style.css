@@ -7,6 +7,19 @@ h1, h2, h3, h4, h5, h6 {
 	font-family: 'Droid Serif', serif;
 }
 
+p {
+	font-size: 14px;
+	margin-bottom: 10px;
+}
+
+blockquote {
+	font-style: italic;
+	font-weight: 300;
+	border-left: 2px solid #cf2334;
+	margin: 10px 0;
+	font-size: 1em;
+}
+
 .fullWidth {
    width: 100%;
    margin-left: auto;
@@ -152,7 +165,8 @@ h1, h2, h3, h4, h5, h6 {
 .article:before {
 	position: absolute;
 	display: block;
-	top: 46%;
+	top: 50%;
+	margin-top: -8px;
 	content: "";
 	height: 16px;
 	width: 16px;
@@ -177,7 +191,8 @@ h1, h2, h3, h4, h5, h6 {
 
 .article.odd {
 	float: left;
-	clear: both;
+	clear: left;
+	margin-bottom: 80px;
 }
 .article.odd:before {
 	right: -47px;
@@ -189,7 +204,8 @@ h1, h2, h3, h4, h5, h6 {
 
 .article.even {
 	float: right;
-	margin-top: 50px;
+	clear: right;
+	margin-top: 80px;
 }
 .article.even:before {
 	left: -47px;
@@ -198,6 +214,12 @@ h1, h2, h3, h4, h5, h6 {
 	right: 100%;
 	border-right-color: #FFF;
 }
+
+/**
+ * Post Formats
+ */
+
+/* Standard */
 
 .featured-image {
 	width: 50%;
@@ -242,6 +264,134 @@ h1, h2, h3, h4, h5, h6 {
 	-webkit-border-radius: 15px;
 	-moz-border-radius: 15px;
 	border-radius: 15px;
+}
+
+/* Aside */
+
+.format-aside {
+	font-style: .9em;
+}
+
+/* Gallery */
+
+.format-gallery {
+
+}
+
+/* Link */
+.format-link .link {
+	background-color: #f5f5f5;
+	border: 1px solid #ececec;
+	padding: 10px;
+}
+.format-link .link:before {
+	font-size: 2em;	
+	font-family: 'FontAwesome';
+	content: "\f0c1";
+	color: #333;
+	float: left;
+}
+.format-link a {
+	color: #6f6f6f;
+	font-style: italic;
+	font-weight: 300;
+	padding-left: 25px;
+}
+.format-link a:hover {
+	color: #cf2334;
+	-webkit-transition: color .6s;
+	-moz-transition: color .6s;
+	transition: color .6s;
+}
+
+/* Image */
+
+.format-image img {
+	width: 100%;
+	max-height: 430px;
+}
+
+/* Quote */
+
+.format-quote blockquote {
+	background-color: #f5f5f5;
+	margin: 0;
+	padding: 10px 20px;
+	border: 1px solid #ececec;
+}
+.format-quote blockquote:before {
+	font-family: 'FontAwesome';
+	content: "\f10d";
+	font-size: 2em;
+	color: #333;
+	float: left;
+}
+.format-quote blockquote p {
+	font-style: italic;
+	font-weight: 300;
+	padding: 5px 0 0 50px;
+	font-size: 1em;
+}
+.format-quote cite {
+	font-weight: 700;
+	float: right;
+}
+
+/* Status */
+
+.status-content {
+	background-color: #f5f5f5;
+	border: 1px solid #ececec;
+	padding: 10px;
+}
+.status-content:after {
+	font-family: "FontAwesome";
+	content: "\f10e";
+	font-size: 2.5em;
+	color: #e7e7e7;
+	position: absolute;
+	right: 20px;
+	top: 20px;
+}
+
+/* Chat */
+
+.chat-content {
+	padding: 10px;
+	background-color: #f5f5f5;
+	border: 1px solid #ececec;
+}
+.chat-content:after {
+	font-family: 'FontAwesome';
+	content: "\f075";
+	font-size: 2.7em;
+	color: #e7e7e7;
+	position: absolute;
+	top: 20px;
+	right: 20px;
+}
+.format-chat {
+	padding-left: 10px;
+}
+.format-chat cite {
+	font-weight: 700;
+	font-size: .9em;
+}
+.format-chat p {
+	margin-bottom: 10px;
+}
+
+.footer-widgets {
+	position: relative;
+	background-color: #fff;
+}
+
+.footer-widget {
+	padding: 10px 0;
+}
+
+.footer-widget-title h4 {
+	font-size: .9em;
 }
 
 .footer {
