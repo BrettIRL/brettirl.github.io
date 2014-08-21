@@ -15,7 +15,7 @@ p {
 blockquote {
 	font-style: italic;
 	font-weight: 300;
-	border-left: 2px solid #cf2334;
+	border-left: 3px solid #cf2334;
 	margin: 10px 0;
 	font-size: 1em;
 }
@@ -219,6 +219,21 @@ blockquote {
  * Post Formats
  */
 
+.aside-content, .chat-content, .status-content {
+	padding: 10px;
+	background-color: #f5f5f5;
+	border: 1px solid #ececec;
+}
+
+.aside-content:after, .chat-content:after, .status-content:after {
+	font-family: "FontAwesome";
+	font-size: 2.5em;
+	color: #e7e7e7;
+	position: absolute;
+	right: 20px;
+	top: 20px;
+}
+
 /* Standard */
 
 .featured-image {
@@ -274,8 +289,65 @@ blockquote {
 
 /* Gallery */
 
-.format-gallery {
-
+.gallery-item {
+	margin: 0 0 5px 0;
+	position: relative;
+	overflow: hidden;
+}
+.gallery-item img {
+	width: 100%;
+	height: auto;
+	-webkit-transition: all .6s;
+	-moz-transition: all .6s;
+	transition: all .6s;
+}
+.gallery-item:nth-child(3n) {
+	width: 100%;
+	clear: both;
+}
+.gallery-item:first-child, .gallery-item:nth-child(3n+1), .gallery-item:nth-child(3n-1) {
+	width: 50%;
+	float: left;
+}
+.gallery-item:first-child, .gallery-item:nth-child(3n+1) {
+	padding-right: 2px;
+}
+.gallery-item:nth-child(3n-1) {
+	padding-left: 2px;
+}
+.gallery-caption a {
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-color: rgba(255,255,255,0);
+	text-align: center;
+	-webkit-transition: all .6s;
+	-moz-transition: all .6s;
+	transition: all .6s;
+}
+.gallery-caption a:hover {
+	background-color: rgba(255,255,255,0.6);
+}
+.gallery-caption a:hover i {
+	opacity: 1;
+}
+.gallery-item:hover img {
+	transform: scale(1.2);
+}
+.gallery-caption i {
+	color: #cf2334;
+	font-size: 2em;
+	position: absolute;
+	top: 50%;
+	margin: -0.5em 0 0 -0.5em;
+	left: 50%;
+	margin-top: ;
+	opacity: 0;
+	-webkit-transition: all .6s;
+	-moz-transition: all .6s;
+	transition: all .6s;
 }
 
 /* Link */
@@ -299,9 +371,9 @@ blockquote {
 }
 .format-link a:hover {
 	color: #cf2334;
-	-webkit-transition: color .6s;
-	-moz-transition: color .6s;
-	transition: color .6s;
+	-webkit-transition: all .6s;
+	-moz-transition: all .6s;
+	transition: all .6s;
 }
 
 /* Image */
@@ -339,36 +411,15 @@ blockquote {
 
 /* Status */
 
-.status-content {
-	background-color: #f5f5f5;
-	border: 1px solid #ececec;
-	padding: 10px;
-}
 .status-content:after {
-	font-family: "FontAwesome";
 	content: "\f10e";
-	font-size: 2.5em;
-	color: #e7e7e7;
-	position: absolute;
-	right: 20px;
-	top: 20px;
+	top: 22px;
 }
 
 /* Chat */
 
-.chat-content {
-	padding: 10px;
-	background-color: #f5f5f5;
-	border: 1px solid #ececec;
-}
 .chat-content:after {
-	font-family: 'FontAwesome';
 	content: "\f075";
-	font-size: 2.7em;
-	color: #e7e7e7;
-	position: absolute;
-	top: 20px;
-	right: 20px;
 }
 .format-chat {
 	padding-left: 10px;
